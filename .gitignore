@@ -1,7 +1,9 @@
-echo venv/ > .gitignore
-echo __pycache__/ >> .gitignore
-echo *.pyc >> .gitignore
-echo db.sqlite3 >> .gitignore
-echo .env >> .gitignore
-echo .vscode/ >> .gitignore
-echo .idea/ >> .gitignore
+venv/
+__pycache__/
+db.sqlite3
+.env
+.vscode/
+*.log
+*.pyc
+.DS_Store
+static/uploads
