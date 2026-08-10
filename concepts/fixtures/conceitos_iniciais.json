@@ -1,0 +1,274 @@
+[
+  {
+    "model": "concepts.modulo",
+    "pk": 1,
+    "fields": {
+      "nome": "Algebra Linear I",
+      "descricao": "Vetores, matrizes, sistemas lineares e transformacoes - base para ML",
+      "ordem": 1
+    }
+  },
+  {
+    "model": "concepts.modulo",
+    "pk": 2,
+    "fields": {
+      "nome": "Calculo Diferencial",
+      "descricao": "Derivadas, gradientes, regra da cadeia e otimizacao para Machine Learning",
+      "ordem": 2
+    }
+  },
+  {
+    "model": "concepts.modulo",
+    "pk": 3,
+    "fields": {
+      "nome": "Estatistica & Probabilidade I",
+      "descricao": "Fundamentos estatisticos para analise de dados e ML",
+      "ordem": 3
+    }
+  },
+  {
+    "model": "concepts.modulo",
+    "pk": 4,
+    "fields": {
+      "nome": "Algebra Linear II",
+      "descricao": "Decomposicoes, autovalores e aplicacoes avancadas",
+      "ordem": 4
+    }
+  },
+  {
+    "model": "concepts.modulo",
+    "pk": 5,
+    "fields": {
+      "nome": "Otimizacao Avancada",
+      "descricao": "Metodos de otimizacao para deep learning",
+      "ordem": 5
+    }
+  },
+  {
+    "model": "concepts.modulo",
+    "pk": 6,
+    "fields": {
+      "nome": "Probabilidade & Inferencia II",
+      "descricao": "Modelos probabilisticos e inferencia bayesiana",
+      "ordem": 6
+    }
+  },
+  {
+    "model": "concepts.modulo",
+    "pk": 7,
+    "fields": {
+      "nome": "Aplicacoes & Integracao",
+      "descricao": "Aplicacoes praticas em Machine Learning e Deep Learning",
+      "ordem": 7
+    }
+  },
+  {
+    "model": "concepts.conceito",
+    "pk": 1,
+    "fields": {
+      "modulo": 1,
+      "titulo": "Vetores e escalares",
+      "slug": "vetores-e-escalares",
+      "ordem": 1,
+      "explicacao": "<h4>O que sao vetores e escalares?</h4><p>Em Machine Learning, vetores representam <strong>dados multidimensionais</strong> onde cada dimensao e uma caracteristica (feature). Escalares sao numeros simples que multiplicam ou escalonam vetores.</p><div class='highlight-box'><strong>Intuicao:</strong> Um vetor e como uma lista de numeros que representa um ponto no espaco. Se voce tem dados de uma casa (tamanho, quartos, idade), isso e um vetor!</div><h4>Exemplo em Python</h4><pre class='code-block'>import numpy as np\n\n# Vetor de caracteristicas de uma casa\ncasa = np.array([120, 3, 15])\n\n# Escalar (multiplicador de preco)\npreco_por_m2 = 5000\n\n# Preco estimado (vetor * escalar)\npreco = casa * preco_por_m2\nprint(f'Caracteristicas: {casa}')\nprint(f'Preco estimado: R$ {preco[0]:.2f}')</pre><h4>Aplicacao em ML</h4><ul><li><strong>Dados tabulares:</strong> Cada linha e um vetor de caracteristicas</li><li><strong>Normalizacao:</strong> Multiplicar vetores por escalares para escalonar dados</li><li><strong>Embeddings:</strong> Palavras representadas como vetores</li></ul>"
+    }
+  },
+  {
+    "model": "concepts.conceito",
+    "pk": 2,
+    "fields": {
+      "modulo": 1,
+      "titulo": "Soma de vetores",
+      "slug": "soma-de-vetores",
+      "ordem": 2,
+      "explicacao": "<h4>O que e soma de vetores?</h4><p>A soma de vetores combina duas ou mais <strong>listas de numeros</strong> elemento a elemento. Em ML, usamos para combinar caracteristicas ou atualizar pesos.</p><div class='highlight-box'><strong>Intuicao:</strong> Se voce tem dois vetores de caracteristicas, soma-los e como combinar duas descricoes do mesmo objeto.</div><h4>Exemplo em Python</h4><pre class='code-block'>import numpy as np\n\nv1 = np.array([1, 2, 3])\nv2 = np.array([4, 5, 6])\n\nsoma = v1 + v2\nprint(f'v1 = {v1}')\nprint(f'v2 = {v2}')\nprint(f'v1 + v2 = {soma}')</pre><h4>Aplicacao em ML</h4><ul><li><strong>Atualizacao de pesos:</strong> pesos = pesos - taxa_aprendizado * gradiente</li><li><strong>Combinacao de features:</strong> Somar caracteristicas para criar novas</li><li><strong>Batch processing:</strong> Somar gradientes de um lote de dados</li></ul>"
+    }
+  },
+  {
+    "model": "concepts.conceito",
+    "pk": 3,
+    "fields": {
+      "modulo": 1,
+      "titulo": "Multiplicacao por escalar",
+      "slug": "multiplicacao-por-escalar",
+      "ordem": 3,
+      "explicacao": "<h4>O que e multiplicacao por escalar?</h4><p>Multiplicar um vetor por um escalar (numero) escala todas as componentes do vetor. Em ML, isso e usado para <strong>redimensionar dados</strong> ou ajustar a magnitude dos pesos.</p><div class='highlight-box'><strong>Intuicao:</strong> E como ampliar ou reduzir uma imagem - todas as dimensoes crescem ou diminuem proporcionalmente.</div><h4>Exemplo em Python</h4><pre class='code-block'>import numpy as np\n\nv = np.array([1, 2, 3])\nescalar = 2.5\n\nresultado = escalar * v\nprint(f'v = {v}')\nprint(f'escalar = {escalar}')\nprint(f'escalar * v = {resultado}')</pre><h4>Aplicacao em ML</h4><ul><li><strong>Taxa de aprendizado:</strong> Multiplicar gradientes por eta</li><li><strong>Normalizacao:</strong> Escalar dados para um intervalo especifico</li><li><strong>Regularizacao L2:</strong> Penalizar pesos grandes</li></ul>"
+    }
+  },
+  {
+    "model": "concepts.conceito",
+    "pk": 4,
+    "fields": {
+      "modulo": 1,
+      "titulo": "Combinacao linear",
+      "slug": "combinacao-linear",
+      "ordem": 4,
+      "explicacao": "<h4>O que e combinacao linear?</h4><p>Uma combinacao linear e a <strong>soma de vetores multiplicados por escalares</strong>. E o conceito fundamental por tras de redes neurais e regressao linear.</p><div class='highlight-box'><strong>Intuicao:</strong> E como fazer uma receita onde cada ingrediente (vetor) tem uma quantidade (escalar) especifica.</div><h4>Exemplo em Python</h4><pre class='code-block'>import numpy as np\n\nv1 = np.array([1, 0])\nv2 = np.array([0, 1])\n\na, b = 2, 3\n\ncombinacao = a * v1 + b * v2\nprint(f'a*v1 + b*v2 = {combinacao}')</pre><h4>Aplicacao em ML</h4><ul><li><strong>Regressao linear:</strong> y = w1x1 + w2x2 + ... + wnxn</li><li><strong>Redes neurais:</strong> Cada neuronio calcula uma combinacao linear</li><li><strong>PCA:</strong> Combinacoes lineares para reducao de dimensionalidade</li></ul>"
+    }
+  },
+  {
+    "model": "concepts.conceito",
+    "pk": 5,
+    "fields": {
+      "modulo": 1,
+      "titulo": "Dependencia linear",
+      "slug": "dependencia-linear",
+      "ordem": 5,
+      "explicacao": "<h4>O que e dependencia linear?</h4><p>Vetores sao linearmente dependentes se <strong>um pode ser escrito como combinacao linear dos outros</strong>. Isso afeta a capacidade de modelos de aprenderem caracteristicas unicas.</p><div class='highlight-box'><strong>Intuicao:</strong> E como ter informacoes redundantes - duas pessoas dizendo a mesma coisa de maneiras diferentes.</div><h4>Exemplo em Python</h4><pre class='code-block'>import numpy as np\n\nv1 = np.array([1, 2, 3])\nv2 = np.array([2, 4, 6])\nv3 = np.array([3, 6, 9])\n\nmatriz = np.array([v1, v2, v3])\nrank = np.linalg.matrix_rank(matriz)\nprint(f'Rank da matriz: {rank}')\nprint(f'Vetores dependentes? {rank < len(matriz)}')</pre><h4>Aplicacao em ML</h4><ul><li><strong>Detecao de colinearidade:</strong> Identificar features redundantes</li><li><strong>Selecao de features:</strong> Remover dimensoes dependentes</li><li><strong>Overfitting:</strong> Dependencia pode causar modelos instaveis</li></ul>"
+    }
+  },
+  {
+    "model": "concepts.conceito",
+    "pk": 6,
+    "fields": {
+      "modulo": 2,
+      "titulo": "Derivada de uma funcao",
+      "slug": "derivada-de-uma-funcao",
+      "ordem": 1,
+      "explicacao": "<h4>O que e uma derivada?</h4><p>A derivada mede a <strong>taxa de variacao instantanea</strong> de uma funcao em relacao a sua variavel. Em Machine Learning, usamos derivadas para encontrar o <strong>minimo de funcoes de custo</strong> atraves de gradiente descendente.</p><div class='highlight-box'><strong>Intuicao:</strong> A derivada e como um velocimetro que mostra a velocidade instantanea em cada ponto do caminho.</div><h4>Definicao formal</h4><p>f'(x) = lim_{h→0} (f(x+h) - f(x)) / h</p><h4>Exemplo em Python</h4><pre class='code-block'>import numpy as np\n\ndef f(x):\n    return x**2 + 3*x + 2\n\ndef derivada_numerica(f, x, h=1e-7):\n    return (f(x+h) - f(x-h)) / (2*h)\n\nx = 2\nprint(f'f({x}) = {f(x)}')\nprint(f'f\\'({x}) = {derivada_numerica(f, x)}')</pre><h4>Aplicacao em ML</h4><ul><li><strong>Gradiente descendente:</strong> Usamos derivadas para atualizar pesos</li><li><strong>Backpropagation:</strong> Calculo de derivadas em redes neurais</li><li><strong>Otimizacao:</strong> Encontrar pontos de minimo e maximo</li></ul>"
+    }
+  },
+  {
+    "model": "concepts.conceito",
+    "pk": 7,
+    "fields": {
+      "modulo": 2,
+      "titulo": "Regras de derivacao",
+      "slug": "regras-de-derivacao",
+      "ordem": 2,
+      "explicacao": "<h4>Regras fundamentais de derivacao</h4><p>As regras de derivacao sao ferramentas essenciais para calcular derivadas de forma eficiente, especialmente em funcoes complexas de Machine Learning.</p><h4>Principais regras</h4><ul><li><strong>Regra da potencia:</strong> d/dx(x^n) = n*x^(n-1)</li><li><strong>Regra da constante:</strong> d/dx(c) = 0</li><li><strong>Regra do produto:</strong> d/dx(f*g) = f'*g + f*g'</li><li><strong>Regra do quociente:</strong> d/dx(f/g) = (f'*g - f*g')/g²</li></ul><div class='highlight-box'><strong>Dica ML:</strong> Em redes neurais, a regra da cadeia e a mais importante!</div><h4>Exemplo em Python</h4><pre class='code-block'>import sympy as sp\n\nx = sp.Symbol('x')\n\nf = x**3 - 2*x**2 + 5*x - 1\nprint(f'f\\'(x) = {sp.diff(f, x)}')</pre><h4>Aplicacao em ML</h4><ul><li>Calculo rapido de gradientes em funcoes de perda</li><li>Derivacao de funcoes de ativacao (ReLU, sigmoide, tanh)</li><li>Implementacao eficiente de backpropagation</li></ul>"
+    }
+  },
+  {
+    "model": "concepts.conceito",
+    "pk": 8,
+    "fields": {
+      "modulo": 2,
+      "titulo": "Regra da cadeia",
+      "slug": "regra-da-cadeia",
+      "ordem": 3,
+      "explicacao": "<h4>O que e a regra da cadeia?</h4><p>A regra da cadeia e fundamental para calcular a derivada de <strong>funcoes compostas</strong>. Em Machine Learning, ela e a base do <strong>backpropagation</strong> em redes neurais.</p><div class='highlight-box'><strong>Intuicao:</strong> Se voce tem f(g(x)), a derivada e f'(g(x)) * g'(x)</div><h4>Definicao formal</h4><p>(f ∘ g)'(x) = f'(g(x)) * g'(x)</p><h4>Exemplo em Python</h4><pre class='code-block'>import numpy as np\n\ndef f(x):\n    return x**2\n\ndef g(x):\n    return 2*x + 1\n\ndef f_composta(x):\n    return f(g(x))</pre><h4>Aplicacao em ML</h4><ul><li><strong>Backpropagation:</strong> Calculo de gradientes em redes profundas</li><li><strong>Redes neurais:</strong> Cada camada e uma funcao composta</li><li><strong>Autoencoders:</strong> Encoder e decoder formam uma funcao composta</li></ul>"
+    }
+  },
+  {
+    "model": "concepts.conceito",
+    "pk": 9,
+    "fields": {
+      "modulo": 2,
+      "titulo": "Derivadas parciais",
+      "slug": "derivadas-parciais",
+      "ordem": 4,
+      "explicacao": "<h4>O que sao derivadas parciais?</h4><p>Derivadas parciais medem a taxa de variacao de uma funcao <strong>multivariavel</strong> em relacao a uma variavel, mantendo as outras constantes.</p><div class='highlight-box'><strong>Intuicao:</strong> E como analisar como a altura de uma montanha muda quando voce anda apenas para o norte.</div><h4>Definicao formal</h4><p>∂f/∂x = lim_{h→0} (f(x+h, y) - f(x,y)) / h</p><h4>Exemplo em Python</h4><pre class='code-block'>import numpy as np\n\ndef f(x, y):\n    return x**2 + y**2 + 3*x*y</pre><h4>Aplicacao em ML</h4><ul><li><strong>Gradiente:</strong> Vetor de todas as derivadas parciais</li><li><strong>Redes neurais:</strong> Derivadas em relacao a cada peso</li><li><strong>Funcoes de custo:</strong> Minimizacao em multiplas dimensoes</li></ul>"
+    }
+  },
+  {
+    "model": "concepts.conceito",
+    "pk": 10,
+    "fields": {
+      "modulo": 2,
+      "titulo": "Gradiente de uma funcao",
+      "slug": "gradiente-de-uma-funcao",
+      "ordem": 5,
+      "explicacao": "<h4>O que e o gradiente?</h4><p>O gradiente e um <strong>vetor</strong> que aponta na direcao de <strong>maior crescimento</strong> de uma funcao multivariavel.</p><div class='highlight-box'><strong>Intuicao:</strong> O gradiente e como uma bussola que sempre aponta para o ponto mais alto da montanha.</div><h4>Definicao formal</h4><p>∇f = (∂f/∂x1, ∂f/∂x2, ..., ∂f/∂xn)</p><h4>Exemplo em Python</h4><pre class='code-block'>import numpy as np\n\ndef f(x, y):\n    return x**2 + y**2</pre><h4>Aplicacao em ML</h4><ul><li><strong>Gradiente descendente:</strong> Algoritmo principal de otimizacao</li><li><strong>Minimo de funcoes de custo:</strong> Encontrar os melhores parametros</li><li><strong>Visualizacao:</strong> Mapas de contorno mostram regioes de minimo</li></ul>"
+    }
+  },
+  {
+    "model": "concepts.conceito",
+    "pk": 11,
+    "fields": {
+      "modulo": 2,
+      "titulo": "Gradiente descendente",
+      "slug": "gradiente-descendente",
+      "ordem": 6,
+      "explicacao": "<h4>O que e gradiente descendente?</h4><p>Gradiente descendente e um algoritmo de <strong>otimizacao iterativa</strong> que encontra o minimo de uma funcao.</p><div class='highlight-box'><strong>Intuicao:</strong> Imagine descer uma montanha com os olhos vendados, dando passos na direcao da maior descida.</div><h4>Algoritmo</h4><p>θ_{t+1} = θ_t - η * ∇J(θ_t)</p><h4>Exemplo em Python</h4><pre class='code-block'>import numpy as np\n\ndef f(x):\n    return x**2 + 4*x + 4</pre><h4>Variacoes em ML</h4><ul><li><strong>Batch:</strong> Usa todo o dataset por iteracao</li><li><strong>Stochastic (SGD):</strong> Usa um exemplo por iteracao</li><li><strong>Mini-batch:</strong> Usa um lote pequeno por iteracao</li></ul>"
+    }
+  },
+  {
+    "model": "concepts.conceito",
+    "pk": 12,
+    "fields": {
+      "modulo": 2,
+      "titulo": "Taxa de aprendizado",
+      "slug": "taxa-de-aprendizado",
+      "ordem": 7,
+      "explicacao": "<h4>O que e a taxa de aprendizado?</h4><p>A taxa de aprendizado (η) determina o <strong>tamanho do passo</strong> no gradiente descendente.</p><div class='highlight-box'><strong>Intuicao:</strong> E como o tamanho dos passos que voce da ao descer a montanha.</div><h4>Efeitos da taxa</h4><ul><li><strong>Muito alta:</strong> Oscilacoes, nao converge</li><li><strong>Muito baixa:</strong> Convergencia lenta</li><li><strong>Ideal:</strong> Convergencia rapida e estavel</li></ul><h4>Exemplo em Python</h4><pre class='code-block'>import numpy as np\n\ndef f(x):\n    return x**2</pre><h4>Aplicacao em ML</h4><ul><li>Hiperparametro critico em todas as redes neurais</li><li>Learning rate scheduling (decay, cyclical)</li><li>Adaptive optimizers: Adam, RMSprop</li></ul>"
+    }
+  },
+  {
+    "model": "concepts.conceito",
+    "pk": 13,
+    "fields": {
+      "modulo": 2,
+      "titulo": "Derivada direcional",
+      "slug": "derivada-direcional",
+      "ordem": 8,
+      "explicacao": "<h4>O que e derivada direcional?</h4><p>A derivada direcional generaliza as derivadas parciais, medindo a taxa de variacao de uma funcao em <strong>qualquer direcao</strong>.</p><div class='highlight-box'><strong>Intuicao:</strong> E como medir a inclinacao de uma montanha em qualquer direcao.</div><h4>Definicao formal</h4><p>D_v f(x) = ∇f(x) * v</p><h4>Exemplo em Python</h4><pre class='code-block'>import numpy as np\n\ndef f(x, y):\n    return x**2 + y**2</pre><h4>Aplicacao em ML</h4><ul><li><strong>Analise de sensibilidade</strong> em modelos</li><li>Interpretacao de gradientes em direcoes especificas</li><li><strong>Otimizacao</strong> com restricoes direcionais</li></ul>"
+    }
+  },
+  {
+    "model": "concepts.conceito",
+    "pk": 14,
+    "fields": {
+      "modulo": 2,
+      "titulo": "Matriz Hessiana",
+      "slug": "matriz-hessiana",
+      "ordem": 9,
+      "explicacao": "<h4>O que e a matriz Hessiana?</h4><p>A Hessiana e uma <strong>matriz de segundas derivadas</strong> parciais. Ela fornece informacao sobre a <strong>curvatura</strong> da funcao.</p><div class='highlight-box'><strong>Intuicao:</strong> Se o gradiente e a velocidade, a Hessiana e a aceleracao.</div><h4>Definicao formal</h4><p>H(f) = [[∂²f/∂x1², ∂²f/∂x1∂x2], [∂²f/∂x2∂x1, ∂²f/∂x2²]]</p><h4>Exemplo em Python</h4><pre class='code-block'>import numpy as np\n\ndef f(x, y):\n    return x**2 + y**2 + 2*x*y</pre><h4>Aplicacao em ML</h4><ul><li><strong>Newton's method:</strong> Otimizacao de segunda ordem</li><li><strong>Analise de convergencia</strong> em redes neurais</li><li>Identificacao de minimos e maximos locais</li></ul>"
+    }
+  },
+  {
+    "model": "concepts.conceito",
+    "pk": 15,
+    "fields": {
+      "modulo": 2,
+      "titulo": "Otimizacao de primeira ordem",
+      "slug": "otimizacao-primeira-ordem",
+      "ordem": 10,
+      "explicacao": "<h4>O que e otimizacao de primeira ordem?</h4><p>Metodos de <strong>primeira ordem</strong> usam apenas informacoes do gradiente para otimizar funcoes.</p><div class='highlight-box'><strong>Intuicao:</strong> Como descer uma montanha usando apenas a inclinacao do terreno.</div><h4>Metodos principais</h4><ul><li><strong>Gradiente Descendente</strong></li><li><strong>Momentum</strong></li><li><strong>AdaGrad</strong></li></ul><h4>Exemplo em Python</h4><pre class='code-block'>import numpy as np\n\ndef f(x):\n    return x**2 + 5*np.sin(x)</pre><h4>Aplicacao em ML</h4><ul><li>Redes neurais: Treinamento com SGD</li><li>Regressao: Minimos quadrados</li><li>Qualquer problema de minimizacao</li></ul>"
+    }
+  },
+  {
+    "model": "concepts.conceito",
+    "pk": 16,
+    "fields": {
+      "modulo": 2,
+      "titulo": "Otimizacao de segunda ordem",
+      "slug": "otimizacao-segunda-ordem",
+      "ordem": 11,
+      "explicacao": "<h4>O que e otimizacao de segunda ordem?</h4><p>Metodos de <strong>segunda ordem</strong> usam a Hessiana para otimizacao. Sao <strong>mais precisos</strong> mas mais caros.</p><div class='highlight-box'><strong>Intuicao:</strong> Como descer uma montanha conhecendo a curvatura do terreno.</div><h4>Metodo de Newton</h4><p>θ_{t+1} = θ_t - H⁻¹*∇J(θ_t)</p><h4>Exemplo em Python</h4><pre class='code-block'>import numpy as np\n\ndef f(x, y):\n    return x**2 + y**2 + 2*x*y</pre><h4>Aplicacao em ML</h4><ul><li><strong>Quasi-Newton:</strong> BFGS, L-BFGS</li><li><strong>Natural Gradient Descent</strong></li><li>Problemas com poucos parametros</li></ul>"
+    }
+  },
+  {
+    "model": "concepts.conceito",
+    "pk": 17,
+    "fields": {
+      "modulo": 2,
+      "titulo": "Funcoes convexas e concavas",
+      "slug": "funcoes-convexas-concavas",
+      "ordem": 12,
+      "explicacao": "<h4>O que sao funcoes convexas e concavas?</h4><p>Funcoes <strong>convexas</strong> tem a propriedade de que qualquer minimo local e global.</p><div class='highlight-box'><strong>Intuicao:</strong> Uma funcao convexa e como uma tigela.</div><h4>Definicao matematica</h4><p>f e convexa se: f(tx + (1-t)y) ≤ t*f(x) + (1-t)*f(y)</p><h4>Exemplo em Python</h4><pre class='code-block'>import numpy as np\n\ndef convexa(x):\n    return x**2</pre><h4>Aplicacao em ML</h4><ul><li><strong>Regressao linear:</strong> Funcao de custo convexa</li><li><strong>Logistica:</strong> Cross-entropy e convexa</li><li><strong>Redes neurais:</strong> Geralmente nao-convexas</li></ul>"
+    }
+  },
+  {
+    "model": "concepts.conceito",
+    "pk": 18,
+    "fields": {
+      "modulo": 2,
+      "titulo": "Pontos criticos e extremos",
+      "slug": "pontos-criticos-extremos",
+      "ordem": 13,
+      "explicacao": "<h4>O que sao pontos criticos?</h4><p>Pontos onde o gradiente e <strong>zero</strong> ou indefinido. Podem ser minimos, maximos ou pontos de sela.</p><div class='highlight-box'><strong>Intuicao:</strong> Pontos criticos sao como cumes, vales e planaltos.</div><h4>Classificacao</h4><ul><li><strong>Minimo local:</strong> Hessiana positiva definida</li><li><strong>Maximo local:</strong> Hessiana negativa definida</li><li><strong>Ponto de sela:</strong> Hessiana indefinida</li></ul><h4>Exemplo em Python</h4><pre class='code-block'>import numpy as np\n\ndef f(x, y):\n    return x**2 - y**2</pre><h4>Aplicacao em ML</h4><ul><li><strong>Paradas antecipadas:</strong> Evitar minimos locais ruins</li><li><strong>Pontos de sela:</strong> Desafio em altas dimensoes</li><li><strong>Inicializacao:</strong> Evitar regioes ruins</li></ul>"
+    }
+  },
+  {
+    "model": "concepts.conceito",
+    "pk": 19,
+    "fields": {
+      "modulo": 2,
+      "titulo": "Backpropagation",
+      "slug": "backpropagation",
+      "ordem": 14,
+      "explicacao": "<h4>O que e backpropagation?</h4><p>Backpropagation e o <strong>algoritmo fundamental</strong> para treinar redes neurais usando a regra da cadeia.</p><div class='highlight-box'><strong>Intuicao:</strong> Como descobrir qual etapa de uma receita deu errado, voltando passo a passo.</div><h4>Processo</h4><ol><li><strong>Forward pass:</strong> Calcula a saida</li><li><strong>Loss:</strong> Calcula o erro</li><li><strong>Backward pass:</strong> Calcula gradientes</li><li><strong>Update:</strong> Atualiza pesos</li></ol><h4>Exemplo em Python</h4><pre class='code-block'>import numpy as np\n\n# Rede neural simples\ndef forward_pass(X, W1, b1, W2, b2):\n    Z1 = X @ W1 + b1\n    A1 = np.maximum(0, Z1)\n    Z2 = A1 @ W2 + b2\n    return Z2, A1, Z1</pre><h4>Aplicacao em ML</h4><ul><li>Treinamento de todas as redes neurais</li><li><strong>Deep learning:</strong> Essencial para redes profundas</li><li><strong>Autoencoders:</strong> Codificacao/decodificacao</li></ul>"
+    }
+  }
+]
