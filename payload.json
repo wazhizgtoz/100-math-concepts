@@ -1,0 +1,53 @@
+{
+    "notification": {
+        "date": "2022-09-05T13:49:02.077-03:00",
+        "order": {
+            "id": "1230252",
+            "code": "0",
+            "type": "Encerramento",
+            "resource": {
+                "fiberPath": {
+                    "items": {
+                        "item": [
+                            {
+                                "name": "producer_olt",
+                                "value": "HUAWEI"
+                            },
+                            {
+                                "name": "enderecoCDO",
+                                "value": "PASSAGEM JULIO CESAR, 47, TELEGRAFO SEM FIO, BELEM - PA 66113290"
+                            },
+                            {
+                                "name": "CDO",
+                                "value": "CDOE-30201-PTP.FO.O:2"
+                            },
+                            {
+                                "name": "CDO",
+                                "value": "CDOE-30201-PTP.FO.I:S8_1-S8_1/IN 1"
+                            },
+                            {
+                                "name": "CEOS",
+                                "value": "CEOS-302-PTP.FO.O:S4_1-S4_1/OUT 1"
+                            },
+                            {
+                                "name": "CEOS",
+                                "value": "CEOS-302-PTP.FO.I:S4_1-S4_1/IN 1"
+                            },
+                            {
+                                "name": "estacao",
+                                "value": "MIA"
+                            }
+                        ]
+                    }
+                },
+                "gponAccess": "A00002WJX"
+            },
+            "description": "Ordem Encerrada com Sucesso",
+            "correlationOrder": "9",
+            "associatedDocument": "OS1788-1"
+        },
+        "customer": {
+            "subscriberId": "EQ0000000001788"
+        }
+    }
+}
